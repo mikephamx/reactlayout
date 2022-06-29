@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/Helper/Variables.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
