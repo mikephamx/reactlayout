@@ -52,8 +52,6 @@ export default class RenderWithLoop extends Component {
       </tr>
     });
   }
-
-
   render() {
     return (
       <div>
@@ -76,7 +74,6 @@ export default class RenderWithLoop extends Component {
           </table>
         </div>
       </div>
-
     )
   }
 }
