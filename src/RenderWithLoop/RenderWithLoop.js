@@ -7,7 +7,7 @@ export default class RenderWithLoop extends Component {
     { id: 3, name: "silver-car", price: 1000, img: './CarBasic/products/silver-car.jpg' },
     { id: 4, name: "steel-car", price: 1000, img: './CarBasic/products/steel-car.jpg' },
   ]
-
+  //Cach 1: Render array object using Loop
   renderTable = () => {
     let trComponentArray = [];
     for (let index = 0; index < this.productList.length; index++) {
@@ -15,7 +15,7 @@ export default class RenderWithLoop extends Component {
       //jsx object 
       let trJSX = (
         //each row must have a unique key to avoid error
-      <tr key={index}> 
+        <tr key={index}>
           <td> {product.id}</td>
           <td> {product.name}</td>
           <td> {product.price}</td>
@@ -30,6 +30,30 @@ export default class RenderWithLoop extends Component {
     }
     return trComponentArray;
   }
+
+  //cach 2: render array object using map() fucntion 
+  renderTableMap = () => {
+    // let trComponentArrayMap = this.productList.map((product, index) => {
+    //   return <tr key={index}>
+    //     <td> {product.id}</td>
+    //     <td> {product.name}</td>
+    //     <td> {product.price}</td>
+    //     <td> <img src={product.img} style={{ width: '200px' }} alt=""/> {" "}</td>
+    //   </tr>
+    // });
+    // return trComponentArrayMap;
+
+    return this.productList.map((product, index) => {
+      return <tr key={index}>
+        <td> {product.id}</td>
+        <td> {product.name}</td>
+        <td> {product.price}</td>
+        <td> <img src={product.img} style={{ width: '200px' }} alt={product.name}/> {" "}</td>
+      </tr>
+    });
+  }
+
+
   render() {
     return (
       <div>
@@ -46,12 +70,13 @@ export default class RenderWithLoop extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.renderTable()}
+              {/* {this.renderTable()} */}
+              {this.renderTableMap()}
             </tbody>
           </table>
-
         </div>
       </div>
+
     )
   }
 }
