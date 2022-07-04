@@ -1,6 +1,7 @@
 import './App.css';
 // import FilmRender from './FilmRenderExercise/FilmRender';
-import Filmrender from './FilmRenderFollow/Filmrender';
+// import Filmrender from './FilmRenderFollow/Filmrender';
+import GlassRender from './GlassRender/GlassRender';
 // import LayoutExcercise from './component/LayoutExcercise';
 // import RenderWithLoop from './RenderWithLoop/RenderWithLoop';
 
@@ -10,7 +11,8 @@ function App() {
      {/* <LayoutExcercise/> */}
      {/* <RenderWithLoop/> */}
     {/* <FilmRender/> */}
-    <Filmrender/>
+    {/* <Filmrender/> */}
+    <GlassRender/>
     </div>
   );
 }

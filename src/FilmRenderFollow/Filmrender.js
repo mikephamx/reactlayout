@@ -16,7 +16,6 @@ export default class Filmrender extends Component {
     })
   }
 
-
   render() {
     return (
       <div style={{ backgroundImage: 'url(./background/avengers.jpg)', minHeight: "100vh", backgroundSize:"cover" }}>
